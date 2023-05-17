@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../../assets/login.png'
 
 const Login = () => {
@@ -7,7 +8,7 @@ const Login = () => {
 
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
+                        <h1 className="text-3xl font-bold">Login now!</h1>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -27,6 +28,7 @@ const Login = () => {
                             <button className="btn btn-primary">Login</button>
                         </div>
                     </div>
+                    <p className='text-center'>New Toy sports car? <Link to='/signup'><span className='text-orange-600 font-bold'>Sign Up</span></Link></p>
                     <div className='text-center mb-2'>
                         <button className="btn btn-outline btn-accent">Google</button>
                     </div>
