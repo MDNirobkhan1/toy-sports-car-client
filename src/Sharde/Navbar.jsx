@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/car.jpg'
 
 const Navbar = () => {
-    const navitems=<>
+    const navitems = <>
         <Link to='/'><li><a>Home</a></li></Link>
         <li><a>All Toys</a></li>
         <li><a>My Toys</a></li>
@@ -18,7 +18,7 @@ const Navbar = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         {navitems}
-                        
+
                     </ul>
                 </div>
                 <a className="btn btn-ghost normal-case text-xl">
@@ -32,7 +32,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-            <button className="btn btn-success mr-2">Login</button>
+                <Link to='/login'><button className="btn btn-success mr-2">Login</button></Link>
                 <button className="btn btn-active btn-secondary">LogOut</button>
             </div>
         </div>
