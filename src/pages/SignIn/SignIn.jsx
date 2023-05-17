@@ -8,34 +8,36 @@ const SignIn = () => {
 
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">
-                        <h1 className="text-3xl font-bold">Please Sign In</h1>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Name</span>
-                            </label>
-                            <input type="name" placeholder="name" className="input input-bordered" />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Email</span>
-                            </label>
-                            <input type="text" placeholder="email" className="input input-bordered" />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Password</span>
-                            </label>
-                            <input type="text" placeholder="password" className="input input-bordered" />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Photo URl</span>
-                            </label>
-                            <input type="text" placeholder="photo" className="input input-bordered" />
-                        </div>
-                        <div className="form-control mt-6">
-                            <button className="btn btn-primary">SignUp</button>
-                        </div>
+                        <h1 className="text-3xl text-center font-bold">Please Sign In</h1>
+                        <form>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Name</span>
+                                </label>
+                                <input type="name" placeholder="name" className="input input-bordered" />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Email</span>
+                                </label>
+                                <input type="text" placeholder="email" className="input input-bordered" />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Password</span>
+                                </label>
+                                <input type="text" placeholder="password" className="input input-bordered" />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Photo URL</span>
+                                </label>
+                                <input type="text" placeholder="photo" className="input input-bordered" />
+                            </div>
+                            <div className="form-control mt-6">
+                                <input className="btn btn-primary" type="submit" value="SignIn" />
+                            </div>
+                        </form>
                     </div>
                     <p className='text-center mb-2'>Already have an account? <Link to='/login'><span className='text-orange-600 font-bold'>Login</span></Link></p>
                 </div>
