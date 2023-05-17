@@ -1,15 +1,16 @@
+import { Link } from 'react-router-dom';
 import logo from '../assets/car.jpg'
 
 const Navbar = () => {
     const navitems=<>
-        <li><a>Home</a></li>
+        <Link to='/'><li><a>Home</a></li></Link>
         <li><a>All Toys</a></li>
         <li><a>My Toys</a></li>
         <li><a>Add A Toy</a></li>
-        <li><a>Blogs</a></li>
+        <Link to='blog'><li><a>Blogs</a></li></Link>
     </>
     return (
-        <div className="navbar bg-base-100  bg-yellow-100">
+        <div className="navbar bg-base-100  bg-yellow-100 mt-4">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -17,6 +18,7 @@ const Navbar = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         {navitems}
+                        
                     </ul>
                 </div>
                 <a className="btn btn-ghost normal-case text-xl">
