@@ -1,11 +1,13 @@
 import Banner from "../Banner/Banner";
+import Gallary from "../Gallary/Gallary";
 
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <h1>this is home</h1>
+            <Gallary></Gallary>
+            
         </div>
     );
 };

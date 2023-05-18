@@ -7,7 +7,7 @@ import car5 from '../../../assets/car-5.jpg'
 import car6 from '../../../assets/car-6.jpg'
 const Banner = () => {
     return (
-        <div className='mt-4'>
+        <div>
             <div className="carousel w-full h-[500px]">
                 <div id="item1" className="carousel-item relative w-full">
                     <img className=' rounded-xl' src={car1} alt="" />
