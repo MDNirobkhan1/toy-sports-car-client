@@ -1,6 +1,8 @@
 import { useEffect, useState, } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import Tab1 from './Tab1';
+import Tab2 from './Tab2';
 
 function ShopCategory() {
     const [reguSpo, setReguSpo] = useState([]);
@@ -20,26 +22,26 @@ function ShopCategory() {
         <div>
             <Tabs>
                 <TabList className='flex justify-center'>
-                    <Tab>Tab 1</Tab>
-                    <Tab>Tab 2</Tab>
-                    <Tab>Tab 3</Tab>
+                    <Tab>Sports car</Tab>
+                    <Tab>Mini fire truck</Tab>
+                    <Tab>Mini police car</Tab>
                 </TabList>
 
                 <TabPanel>
                    {
-                    reguSpo.map( car => <div key={car._id}>
-                        <li>{car.name}</li>
-                        <img className='h-10 w-10 z-40' src={car.img} alt="" />
-                    </div>)
+                    reguSpo.map( car => <Tab1 
+                    key={car._id}
+                    car={car}
+                    ></Tab1>)
                    }
                 </TabPanel>
                 <TabPanel>
                 {
-                    toy.map( car => <div key={car._id}>
-                        <li>{car.name}</li>
-                        <img className='h-10 w-10 z-40' src={car.img} alt="" />
-                    </div>)
-                   }
+                    toy.map( car =><Tab2
+                        key={car._id}
+                        car={car}
+                    ></Tab2> )
+                }
                 </TabPanel>
                 <TabPanel>
                     <h2>Content for Tab 3</h2>
