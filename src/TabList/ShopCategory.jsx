@@ -3,19 +3,27 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Tab1 from './Tab1';
 import Tab2 from './Tab2';
+import Tab3 from './Tab3';
 
 function ShopCategory() {
     const [reguSpo, setReguSpo] = useState([]);
+    const [toy, setToy] = useState([]);
+    const [policeCar, setPoliceCar]=useState([])
     useEffect(() => {
         fetch('http://localhost:5000/regu-spo')
         .then(res => res.json())
         .then(data => setReguSpo(data))
     }, [])
-    const [toy, setToy] = useState([]);
+    
     useEffect(() => {
         fetch('http://localhost:5000/toy-car')
         .then(res => res.json())
         .then(data => setToy(data))
+    }, [])
+    useEffect(() => {
+        fetch('http://localhost:5000/police-car')
+        .then(res => res.json())
+        .then(data => setPoliceCar(data))
     }, [])
     console.log("🚀 ~ file: ShopCategory.jsx:7 ~ ShopCategory ~ toy:", toy)
     return (
@@ -44,7 +52,12 @@ function ShopCategory() {
                 }
                 </TabPanel>
                 <TabPanel>
-                    <h2>Content for Tab 3</h2>
+                    {
+                        policeCar.map(car=> <Tab3
+                            key={car._id}
+                            car={car}
+                        ></Tab3>)
+                    }
                 </TabPanel>
             </Tabs>
         </div>
