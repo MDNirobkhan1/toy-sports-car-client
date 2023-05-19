@@ -6,9 +6,9 @@ import Gallary from "../Gallary/Gallary";
 const Home = () => {
     return (
         <div>
-            <ShopCategory />
             <Banner></Banner>
             <Gallary></Gallary>
+            <ShopCategory />
         </div>
     );
 };

@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 const Tab1 = ({ car }) => {
     const { _id, name, price, img, rating } = car
     return (
-        <div className="card card-side bg-base-100 shadow-xl p-4 mb-2 w-1/2">
-            <figure><img className="w-60 rounded-xl" src={img} alt="Movie" /></figure>
+        <div className="card card-side bg-base-100 shadow-xl p-4 mb-2">
+            <figure><img className="w-96 rounded-xl" src={img} alt="Movie" /></figure>
             <div className="card-body">
                 <h2 className="card-title">Name: {name}</h2>
                 <p>Price: ${price}</p>
