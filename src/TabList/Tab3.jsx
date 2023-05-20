@@ -12,7 +12,7 @@ const Tab3 = ({car}) => {
                 <h2 className="card-title">Name: {name}</h2>
                 <p>Price: ${price}</p>
                 <p>Rating: {rating}</p>
-                <Link to='/details'><button className="btn btn-primary">View Details </button></Link>
+                <Link to={`/details/${_id}`}><button className="btn btn-primary">View Details </button></Link>
             </div>
         </div>
     );

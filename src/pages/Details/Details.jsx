@@ -1,13 +1,42 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 
 const Details = () => {
+    const { id } = useParams();
+    const [carDetails, setCarDetails] = useState({});
+    console.log(id);
+    
+    useEffect(() => {
+        fetch(`http://localhost:5000/regu-spo/${id}`)
+        .then(res => res.json())
+        .then(data => setCarDetails(data))
+    }, [id])
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/toy-car/${id}`)
+        .then(res => res.json())
+        .then(data => setCarDetails(data))
+    }, [id])
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/police-car/${id}`)
+        .then(res => res.json())
+        .then(data => setCarDetails(data))
+    }, [id])
+
+    console.log("🚀 ~ file: Details.jsx:8 ~ Details ~ carDetails:", carDetails)
+
+    const { price, name, rating, img, details } = carDetails;
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <img src="/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" />
+                <img src={img} className="max-w-sm rounded-lg shadow-2xl" />
                 <div>
-                    <h1 className="text-5xl font-bold">Box Office News!</h1>
-                    <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                    <h1 className="text-5xl font-bold">{name}</h1>
+                    <p className="py-6">{details}</p>
+                    <p>rating: {rating}</p>
+                    <p>price: {price}</p>
                     <button className="btn btn-primary">Get Started</button>
                 </div>
             </div>

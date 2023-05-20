@@ -1,10 +1,14 @@
+/* eslint-disable no-unused-vars */
 import { Link } from 'react-router-dom';
 import logo from '../assets/car.jpg'
+import { useContext } from 'react';
+import { AuthContext } from '../context/AuthProvider';
 
 const Navbar = () => {
+    const {user} = useContext(AuthContext)
     const navitems = <>
         <Link to='/'><li><a>Home</a></li></Link>
-        <li><a>All Toys</a></li>
+        <Link to='/allToy'><li><a>All Toys</a></li></Link>
         <li><a>My Toys</a></li>
         <Link to='/addToyCar'><li><a>Add A Toy</a></li></Link>
         <Link to='/blog'><li><a>Blogs</a></li></Link>
