@@ -3,51 +3,51 @@ import Main from "../Layout/Main";
 import Home from "../pages/Home/Home/Home";
 import Errorpage from "../pages/Home/ErrorPage/Errorpage";
 import Login from "../pages/Login/Login";
-import SignIn from "../pages/SignIn/SignIn";
+import SignUp from "../pages/SignUp/SignUp";
 import Blog from "../pages/Blog/Blog";
 import Details from "../pages/Details/Details";
 import AddToy from "../pages/AddToy/AddToy";
 import AllToy from "../pages/AllToy/AllToy";
-// import PrivateRout from "./PrivateRout";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main></Main>,
-      errorElement:<Errorpage></Errorpage>,
-      children:[
-        {
-            path:'/',
-            element:<Home></Home>,
-            
-        },
-        {
-            path:'login',
-            element:<Login></Login>
-        },
-        {
-            path:'/signup',
-            element:<SignIn></SignIn>
-        },
-        {
-          path: 'blog',
-          element:<Blog></Blog>
-        },
-        {
-          path:'addToyCar',
-          element:<AddToy></AddToy>
-        },
-        {
-          path:'/details/:id',
-          element:<Details></Details>
-        },
-        {
-          path:'allToy',
-          element:<AllToy></AllToy>
-        }
-      ]
-    },
-  ]);
+  {
+    path: "/",
+    element: <Main></Main>,
+    errorElement: <Errorpage></Errorpage>,
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>,
 
-  export default router;
+      },
+      {
+        path: 'login',
+        element: <Login></Login>
+      },
+      {
+        path: '/signup',
+        element: <SignUp></SignUp>
+      },
+      {
+        path: 'blog',
+        element: <Blog></Blog>
+      },
+      {
+        path: 'addToyCar',
+        element: <AddToy></AddToy>
+      },
+      {
+        path: '/details/:id',
+        element: <PrivateRoute><Details></Details></PrivateRoute>
+      },
+      {
+        path: 'allToy',
+        element: <PrivateRoute><AllToy></AllToy></PrivateRoute>
+      }
+    ]
+  },
+]);
+
+export default router;

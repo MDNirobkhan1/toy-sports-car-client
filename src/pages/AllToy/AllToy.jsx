@@ -26,9 +26,9 @@ const AllToy = () => {
                                     <input type="checkbox" className="checkbox" />
                                 </label>
                             </th>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>Seller:Name</th>
+                            <th>Toy Name: </th>
+                            <th>Sub-category: </th>
                             <th></th>
                         </tr>
                     </thead>
@@ -66,16 +66,6 @@ const AllToy = () => {
                         {/* row 2 */}
                         
                     </tbody>
-                    {/* foot */}
-                    <tfoot>
-                        <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
-                            <th></th>
-                        </tr>
-                    </tfoot>
 
                 </table>
             </div>

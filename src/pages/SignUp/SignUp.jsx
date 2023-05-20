@@ -3,8 +3,8 @@ import logo from '../../assets/login.png'
 import { useContext } from 'react';
 import { AuthContext } from '../../context/AuthProvider';
 
-const SignIn = () => {
-    const { createUser } = useContext(AuthContext);
+const SignUp = () => {
+    const { createUser, profileUpdate } = useContext(AuthContext);
 
     const handleSignUp = event => {
         event.preventDefault();
@@ -19,6 +19,9 @@ const SignIn = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                profileUpdate(name, photo)
+                    .then(() => { })
+                    .catch(err => console.log(err))
             })
             .catch(error => console.log(error))
     }
@@ -55,7 +58,7 @@ const SignIn = () => {
                                 <input type="text" placeholder="photo" name='photo' className="input input-bordered" />
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn btn-primary" type="submit" value="SignIn" />
+                                <input className="btn btn-primary" type="submit" value="Sign Up" />
                             </div>
                         </form>
                     </div>
@@ -69,4 +72,4 @@ const SignIn = () => {
     );
 };
 
-export default SignIn;
+export default SignUp;
