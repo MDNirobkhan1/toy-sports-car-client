@@ -5,7 +5,7 @@ const Blog = () => {
     return (
         <div>
             <h1 className='text-center font-bold text-3xl'>The Questions answer</h1>
-            <div className="bg-slate-600 p-4 text-white mt-8">
+            <div className="bg-slate-900 p-4 text-white mt-8">
                 <p className='bg-green-300 bg-opacity-75 p-4 rounded-xl'>
                     <h5>1. What is an access token and refresh token? How do they work and where should we store them on the client-side ?</h5> <br />
                     Ans: In OAuth 2.0, JWT can be used as an access token and/or a refresh token. Access tokens are used to access protected resources, such as an API,  .
