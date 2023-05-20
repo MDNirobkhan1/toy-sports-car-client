@@ -11,7 +11,7 @@ const AddToy = () => {
         const form = event.target;
         const photo = form.photo.value;
         const name = form.name.value;
-        const selller = form.seller.value;
+        const seller = form.seller.value;
         const email = user?.email;
         const category = form.category.value;
         const price = form.price.value;
@@ -26,7 +26,7 @@ const AddToy = () => {
             pricea: price,
             rating: rating,
             quantity: quantity,
-            selller
+            seller
 
         }
         console.log(addToy);

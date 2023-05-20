@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../context/AuthProvider";
 
 
-const AllToy = () => {
+const MyToys = () => {
     const { user } = useContext(AuthContext);
     const [addToy, setAddToy] = useState([]);
     const url = `http://localhost:5000/addToToy?email=${user?.email}`
@@ -13,7 +13,7 @@ const AllToy = () => {
             .then(res => res.json())
             .then(data => setAddToy(data))
     }, [])
-    
+
     return (
         <div>
             <div className="overflow-x-auto w-full">
@@ -40,12 +40,14 @@ const AllToy = () => {
                                 <td>{toy.pricea}</td>
                                 <td>{toy.rating}</td>
                                 <td>{toy.quantity}</td>
-                                <button className="btn btn-active btn-ghost">View Details</button>
+                                
                             </tr>
+                            
                             )
+                            
                         }
 
-
+                        
                     </tbody>
 
                 </table>
@@ -54,4 +56,4 @@ const AllToy = () => {
     );
 };
 
-export default AllToy;
+export default MyToys;

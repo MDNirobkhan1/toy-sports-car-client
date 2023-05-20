@@ -25,7 +25,7 @@ function ShopCategory() {
             .then(res => res.json())
             .then(data => setPoliceCar(data))
     }, [])
-    console.log("🚀 ~ file: ShopCategory.jsx:7 ~ ShopCategory ~ toy:", toy)
+    // console.log("🚀 ~ file: ShopCategory.jsx:7 ~ ShopCategory ~ toy:", toy)
     return (
         <div>
             <Tabs>
