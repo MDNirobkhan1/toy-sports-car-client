@@ -10,18 +10,18 @@ function ShopCategory() {
     const [toy, setToy] = useState([]);
     const [policeCar, setPoliceCar] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/regu-spo')
+        fetch('https://assignment-11-server-tan.vercel.app/regu-spo')
             .then(res => res.json())
             .then(data => setReguSpo(data))
     }, [])
 
     useEffect(() => {
-        fetch('http://localhost:5000/toy-car')
+        fetch('https://assignment-11-server-tan.vercel.app/toy-car')
             .then(res => res.json())
             .then(data => setToy(data))
     }, [])
     useEffect(() => {
-        fetch('http://localhost:5000/police-car')
+        fetch('https://assignment-11-server-tan.vercel.app/police-car')
             .then(res => res.json())
             .then(data => setPoliceCar(data))
     }, [])

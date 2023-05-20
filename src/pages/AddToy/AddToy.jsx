@@ -31,7 +31,7 @@ const AddToy = () => {
         }
         console.log(addToy);
 
-        fetch('http://localhost:5000/addToToy',{
+        fetch('https://assignment-11-server-tan.vercel.app/addToToy',{
             method:'POST',
             headers:{
                 'content-type': 'application/json'

@@ -8,19 +8,19 @@ const Details = () => {
     console.log(id);
     
     useEffect(() => {
-        fetch(`http://localhost:5000/regu-spo/${id}`)
+        fetch(`https://assignment-11-server-tan.vercel.app/regu-spo/${id}`)
         .then(res => res.json())
         .then(data => setCarDetails(data))
     }, [id])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/toy-car/${id}`)
+        fetch(`https://assignment-11-server-tan.vercel.app/toy-car/${id}`)
         .then(res => res.json())
         .then(data => setCarDetails(data))
     }, [id])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/police-car/${id}`)
+        fetch(`https://assignment-11-server-tan.vercel.app/police-car/${id}`)
         .then(res => res.json())
         .then(data => setCarDetails(data))
     }, [id])

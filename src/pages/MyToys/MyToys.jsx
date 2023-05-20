@@ -6,7 +6,7 @@ import { AuthContext } from "../../context/AuthProvider";
 const MyToys = () => {
     const { user } = useContext(AuthContext);
     const [addToy, setAddToy] = useState([]);
-    const url = `http://localhost:5000/addToToy?email=${user?.email}`
+    const url = `https://assignment-11-server-tan.vercel.app/addToToy?email=${user?.email}`
 
     useEffect(() => {
         fetch(url)
