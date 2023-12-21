@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home/Home";
 import Errorpage from "../pages/Home/ErrorPage/Errorpage";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
+
 import Details from "../pages/Details/Details";
 import AddToy from "../pages/AddToy/AddToy";
 import AllToy from "../pages/AllToy/AllToy";
