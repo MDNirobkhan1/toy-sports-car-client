@@ -26,10 +26,10 @@ const Navbar = () => {
                 <Link to='/allToy'><li><a>All Toys</a></li></Link>
                 <Link to={'myToys'}><li><a>My Toys</a></li></Link>
                 <Link to='/addToyCar'><li><a>Add A Toy</a></li></Link>
-                <Link to='/blog'><li><a>Blogs</a></li></Link> </> : <>
+                 </> : <>
 
                 <Link to='/'><li><a>Home</a></li></Link>
-                <Link to='/blog'><li><a>Blogs</a></li></Link>
+                
             </>
         }
 
